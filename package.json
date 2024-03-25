@@ -9,6 +9,7 @@
     "discord.js": "^11.4.2",
     "get-json": "^1.0.1",
     "google-images": "^2.1.0",
+    "jest": "^29.7.0",
     "jimp": "^0.22.12",
     "moment": "^2.22.2",
     "ms": "^2.1.1",
@@ -16,7 +17,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest",
+    "test:watch": "npx jest --watch",
+    "coverage": "npx jest --coverage --coverageDirectory=coverage"
   },
   "repository": {
     "type": "git",
