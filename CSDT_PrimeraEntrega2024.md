@@ -8,6 +8,12 @@ El objetivo de este archivo es consolidar los diferentes análisis y entregas qu
 
 ## Tabla de contenidos
 - [SonarCloud](#sonarcloud)
+    - [Reliability](#reliability)
+    - [Security](#security)
+    - [Security Review](#security-review)
+    - [Maintainability](#maintainability)
+    - [Coverage](#coverage)
+    - [Duplications](#duplications)
 - [Otras Recomendaciones](#otras-recomendaciones)
     - [NPM](#npm)
     - [Pruebas](#pruebas)
@@ -206,6 +212,8 @@ Y cómo primer acercamiento a la implementación de pruebas de este proyecto se 
 - Las integraciones con plataformas externas no son claras y el hecho de usar un archivo .json para estas llaves y ids que requiere el bot lo hace difícil de entender e implementar. Cómo primer paso se debe empezar por cargar estos datos usando variables de entorno y agregar un archivo `.env.example` para que cualquier persona que quiera implementar el bot sepa claramente que datos necesita el bot.
 
 - Aprovechando que se debe hacer una refactorización del código de los comandos. Se ve la oportunidad de implementar las pruebas antes para validar el funcionamiento de los comandos.
+
+- Herramientas generadoras de código cómo github copilot son de bastante utilidad para generar pruebas automatizadas o recibir sugerencias de implementaciones de funcionalidades en el código.
 
 
 ## Badges
