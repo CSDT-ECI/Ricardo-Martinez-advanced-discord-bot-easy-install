@@ -219,3 +219,11 @@ Y cómo primer acercamiento a la implementación de pruebas de este proyecto se 
 ## Badges
 
 [![Build](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/actions/workflows/build.yml/badge.svg)](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/actions/workflows/build.yml)
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot)
+
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot)
+
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot&metric=coverage)](https://sonarcloud.io/summary/new_code?id=CDST-Ricardo-Martinez_Ricardo-Martinez-advanced-discord-bot)
