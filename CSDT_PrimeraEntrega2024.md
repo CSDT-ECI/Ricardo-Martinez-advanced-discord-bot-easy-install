@@ -100,7 +100,7 @@ Para solucionar esto la propuesta es crear una clase con las funciones para ejec
 
 [Voting Handler Class](src/classes/voting-handler.js)
 
-Usando esta clase el código que implementarian los comandos sería:
+Usando esta clase, el código que implementarian los comandos sería:
 
 - [vote.js](cmd/vote.js)
 
