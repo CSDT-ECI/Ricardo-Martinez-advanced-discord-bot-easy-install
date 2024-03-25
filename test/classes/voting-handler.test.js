@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const VotingHandlerModule = require('../classes/voting-handler.js');
+const VotingHandlerModule = require('../../src/classes/voting-handler.js');
 
 describe('VotingHandler', () => {
 
