@@ -140,7 +140,7 @@ Usando esta clase el código que implementarian los comandos sería:
     const YES_Count = reactions.get(agree).count ?? 0;
     const NO_Count = reactions.get(disagree).count ?? 0;
     ```
-Con esta solución no solo se evita el código duplicado, sino que queda abierta la funcionalidad para manejar diferentes tipos de votación o para poder desde la invocación del comando configurar el mensaje y los tiempos de respuesta.
+Con esta solución no solo se evita el código duplicado, sino que queda abierta la funcionalidad para manejar diferentes tipos de votación o configurar los parámetros como el mensaje y los tiempos de respuesta desde la invocación del comando.
 
 ## Otras recomendaciones
 ### npm
@@ -190,7 +190,8 @@ Al cambiar actualizar los paquetes y ajustar el comando de memes se redujeron ba
 
 
 ## Conclusiones
-
+- El bot de discord mantiene un funcionamiento básico sin embargo después de los análisis y pruebas de ejecución de los diferentes comandos es evidente que se requiere una refactorización para eliminar todos los malos olores y problemas de lógica o ejecución que tiene actualmente.
+- Las integraciones con plataformas externas no son claras y el hecho de usar un archivo .json para estas llaves y ids que requiere el bot lo hace difícil de entender e implementar. Cómo primer paso se debe empezar por cargar estos datos usando variables de entorno y agregar un archivo `.env.example` para que cualquier persona que quiera implementar el bot sepa claramente que datos necesita el bot.
 
 ## Badges
 
