@@ -193,7 +193,7 @@ Después de revisar los demás paquetes que presentan vulnerabilidades, se encon
 
     Después de investigar parece que la ruta de csgo tracker fue bajada o ya no esta en funcionamiento. Habría que buscar otras APIs para hacer el tracking o bajar el comando.
 
-Al cambiar actualizar los paquetes y ajustar el comando de memes se redujeron bastante las vulnerabilidades de paquetes que se reportaron.
+Al actualizar los paquetes y ajustar el comando de memes se redujeron bastante las vulnerabilidades de paquetes que se reportaron.
 
 ![Packages Remaining Vulnerabilities](/img/packages-remaining-vulnerabilities.png)
 
