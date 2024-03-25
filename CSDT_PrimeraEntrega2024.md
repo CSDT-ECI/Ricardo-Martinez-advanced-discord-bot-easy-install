@@ -1,5 +1,5 @@
 # CSDT Primera Entrega Bitacora
-El objetivo de este archivo es consolidar los diferentes análisis y entregas que se han hecho hasta la fecha sobre el estado de calidad del proyecto y agregar nuevos aportes, análisis y conclusiones de este. 
+El objetivo de este archivo es consolidar los diferentes análisis y entregas que se han hecho hasta la fecha sobre el estado de calidad del proyecto y agregar nuevos aportes, análisis y conclusiones de este.
 
 ## Aportes Previos
 - [Refactoring + Code Smells](/markdown-files/CSDT-2024.md#refactoring--code-smells)
@@ -22,7 +22,7 @@ Se obtuvo una calificación de C en esta métrica. Lo que quiere decir que la ap
 
 ![Reliability bug](/img/self-role-reliability-bug.png)
 
-Después de revisar el reporte se encontró que el bug que reporta se encuentra en el archivo [selfrole.js](cmd/selfrole.js) en el ciclo de la función RoleChecker que valida los roles. 
+Después de revisar el reporte se encontró que el bug que reporta se encuentra en el archivo [selfrole.js](cmd/selfrole.js) en el ciclo de la función RoleChecker que valida los roles.
 
 ```javascript
 for(var currentStatIndex = 0; currentStatIndex < notAllowed.length; currentStatIndex++) {
@@ -45,7 +45,7 @@ let isRoleAddAllowed = !notAllowed.includes(SELF_ROLE);
 if (!isRoleAddAllowed) {
     msg.reply("You are not allowed to self assign the role: " + role.name);
     return;
-} 
+}
 target.addRole(role.id).then(() => {
     msg.channel.send(`You have been given the: "${role.name}" role!`);
 });
@@ -91,7 +91,6 @@ La herramienta encontró un 3% de duplicaciones de código. Después de revisar 
   }
 
   var sumsum = new Discord.RichEmbed()
-  
             .addField("Voting Finished:", "----------------------------------------\n" +
                                           "Total votes (NO): " + `${NO_Count-1}\n` +
                                           "Total votes (Yes): " + `${YES_Count-1}\n` +
@@ -167,8 +166,14 @@ Después de revisar los demás paquetes que presentan vulnerabilidades, se encon
 
 - dankmemes
 
-    Presenta la mayor cantidad de vulnerabilidades, 7 altas y 1 moderada.
-    
+    Presenta la mayor cantidad de vulnerabilidades, 7 altas y 1 moderada. Sin mencionar que tal vez debido a la antigüedad del paquete usado, el comando genera un error cuando se usa.
+
+    ![Memes Error](/img/memes-error.png)
+
+    Para mitigar estas vulnerabilidades que parecen ser las más graves se ajusto el comando de memes para consulta una url que genera memes de manera aleatoria usando axios en el archivo [memes.js](cmd/memes.js).
+
+    ![Meme displayed](image.png)
+
 - google-images
 
     Presenta dos vulnerabilidades moderadas las cuales consisten en depender de versiones vulnerables de otros paquetes.

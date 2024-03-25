@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const axios = require('axios');
 
 async function getRandomMeme() {
@@ -6,7 +7,7 @@ async function getRandomMeme() {
     const post = response.data[0].data.children[0].data;
     const meme = {
       title: post.title,
-      image: post.url_overridden_by_dest,
+      image: post.url,
       subreddit: post.subreddit,
       permalink: `https://reddit.com${post.permalink}`
     };
