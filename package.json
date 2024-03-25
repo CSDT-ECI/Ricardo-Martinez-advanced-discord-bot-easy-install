@@ -9,12 +9,11 @@
     "discord.js": "^11.4.2",
     "get-json": "^1.0.1",
     "google-images": "^2.1.0",
-    "jimp": "^0.5.3",
+    "jimp": "^0.22.12",
     "moment": "^2.22.2",
     "ms": "^2.1.1",
     "request": "^2.88.0"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

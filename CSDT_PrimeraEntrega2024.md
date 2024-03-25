@@ -163,7 +163,15 @@ La herramienta solo pudo actualizar algunos paquetes:
 
 ![packages audited](/img/packages-audited.png)
 
-Los demás tuvieron que ser revisados y reemplazados en las funciones.
+Después de revisar los demás paquetes que presentan vulnerabilidades, se encontró que son los paquetes `dankmemes` que solo se usa en el archivo [memes.js](cmd/memes.js) para generar memes, el paquete `google-images` que se usa en el comando [images.js](cmd/images.js) para generar imágenes usando el api de google y el paquete `requests` que se usa para hacer una petición a una página y obtener la información html de un perfil en el comando [csgo.js](cmd/csgo.js).
+
+- dankmemes
+    Presenta la mayor cantidad de vulnerabilidades, 7 altas y 1 moderada.
+- google-images
+    Presenta dos vulnerabilidades moderadas las cuales consisten en depender de versiones vulnerables de otros paquetes.
+- requests
+    Presenta dos vulnerabilidades moderadas las cuales consisten en depender de versiones vulnerables de otros paquetes.
+
 
 ## Conclusiones
 
