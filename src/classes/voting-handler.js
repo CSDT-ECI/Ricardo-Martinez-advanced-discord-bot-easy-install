@@ -1,18 +1,18 @@
+const Discord = require('discord.js');
 class VotingHandler {
 
   _voteText = null;
-  _options = [
-    { name: "Yes", emoji: agree },
-    { name: "No", emoji: disagree },
-  ];
+  _options = [];
   _time = 10000;
   _channel = null;
+  _note = '';
 
-  constructor(voteText, options, time, channel) {
+  constructor(voteText, options, time, channel, note = '') {
     this._voteText = voteText;
     this._options = options;
     this._time = time;
     this._channel = channel;
+    this._note = note;
   }
 
   get voteText() {
@@ -27,6 +27,10 @@ class VotingHandler {
     return this._time;
   }
 
+  get note() {
+    return this._note;
+  }
+
   set voteText(voteText) {
     this._voteText = voteText;
   }
@@ -37,6 +41,10 @@ class VotingHandler {
 
   set time(time) {
     this._time = time;
+  }
+
+  set note(note) {
+    this._note = note;
   }
 
   async performVotingProcess(color = "0x#FF0000") {
@@ -75,6 +83,7 @@ class VotingHandler {
         "Voting Finished:",
         "----------------------------------------\n" +
         countsMessage +
+        this.note +
         "----------------------------------------"
       );
 
@@ -82,3 +91,5 @@ class VotingHandler {
 
   }
 }
+
+exports.VotingHandler = VotingHandler;
