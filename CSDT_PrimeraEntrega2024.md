@@ -197,6 +197,8 @@ Cómo parte de esta entrega se realizaron las configuraciones necesarias para ej
 
 Y cómo primer acercamiento a la implementación de pruebas de este proyecto se creó el archivo de pruebas [voting-handler.test.js](test\classes\voting-handler.test.js) para realizar la prueba de la nueva clase y validar la ejecución de pruebas en el proyecto.
 
+![Voting Handler Test](/img/voting-handler-test.png)
+
 
 ## Conclusiones
 - El bot de discord mantiene un funcionamiento básico sin embargo después de los análisis y pruebas de ejecución de los diferentes comandos es evidente que se requiere una refactorización para eliminar todos los malos olores y problemas de lógica o ejecución que tiene actualmente.
