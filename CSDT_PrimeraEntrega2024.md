@@ -9,6 +9,8 @@ El objetivo de este archivo es consolidar los diferentes análisis y entregas qu
 ## Tabla de contenidos
 - [SonarCloud](#sonarcloud)
 - [Otras Recomendaciones](#otras-recomendaciones)
+    - [NPM](#npm)
+    - [Pruebas](#pruebas)
 - [Conclusiones](#conclusiones)
 - [Badges](#badges)
 
@@ -143,7 +145,8 @@ Usando esta clase, el código que implementarian los comandos sería:
 Con esta solución no solo se evita el código duplicado, sino que queda abierta la funcionalidad para manejar diferentes tipos de votación o configurar los parámetros como el mensaje y los tiempos de respuesta desde la invocación del comando.
 
 ## Otras recomendaciones
-### npm
+
+### NPM
 La herramienta de paquetes de node encontró 20 vulnerabilidades en los paquetes instalados y especificados en los archivos package*.json
 
 ![packages warn](/img/packages-warning.png)
@@ -188,10 +191,20 @@ Al cambiar actualizar los paquetes y ajustar el comando de memes se redujeron ba
 
 ![Packages Remaining Vulnerabilities](/img/packages-remaining-vulnerabilities.png)
 
+### Pruebas
+
+Cómo parte de esta entrega se realizaron las configuraciones necesarias para ejecutar pruebas unitarias de manera local con el comando `npm run test`, generar un informe de covertura con el comando `npm run coverage` y revisar el nivel de covertura en la herramienta de sonar con jest.
+
+Y cómo primer acercamiento a la implementación de pruebas de este proyecto se creó el archivo de pruebas [voting-handler.test.js](test\classes\voting-handler.test.js) para realizar la prueba de la nueva clase y validar la ejecución de pruebas en el proyecto.
+
 
 ## Conclusiones
 - El bot de discord mantiene un funcionamiento básico sin embargo después de los análisis y pruebas de ejecución de los diferentes comandos es evidente que se requiere una refactorización para eliminar todos los malos olores y problemas de lógica o ejecución que tiene actualmente.
+
 - Las integraciones con plataformas externas no son claras y el hecho de usar un archivo .json para estas llaves y ids que requiere el bot lo hace difícil de entender e implementar. Cómo primer paso se debe empezar por cargar estos datos usando variables de entorno y agregar un archivo `.env.example` para que cualquier persona que quiera implementar el bot sepa claramente que datos necesita el bot.
+
+- Aprovechando que se debe hacer una refactorización del código de los comandos. Se ve la oportunidad de implementar las pruebas antes para validar el funcionamiento de los comandos.
+
 
 ## Badges
 
