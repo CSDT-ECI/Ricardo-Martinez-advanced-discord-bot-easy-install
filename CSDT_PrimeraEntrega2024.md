@@ -170,7 +170,7 @@ Después de revisar los demás paquetes que presentan vulnerabilidades, se encon
 
     ![Memes Error](/img/memes-error.png)
 
-    Para mitigar estas vulnerabilidades que parecen ser las más graves se ajusto el comando de memes para consulta una url que genera memes de manera aleatoria usando axios en el archivo [memes.js](cmd/memes.js).
+    Para mitigar estas vulnerabilidades que parecen ser las más graves se ajusto el comando de memes para consultar una url que genera memes de manera aleatoria usando axios en el archivo [memes.js](cmd/memes.js).
 
     ![Meme displayed](/img/meme-displayed.png)
 
