@@ -47,6 +47,10 @@ class VotingHandler {
     this._note = note;
   }
 
+  validateReaction = reaction => {
+    return this._options.some(option => option.emoji === reaction.emoji.name)
+  };
+
   async performVotingProcess(color = "0x#FF0000") {
     let voteMessage = await this._channel.send(this._voteText);
     this._options.forEach(option => {
@@ -54,11 +58,7 @@ class VotingHandler {
     });
 
     const reactions = await voteMessage.awaitReactions(
-      reaction => {
-        let answers = this._options.map(option => option.emoji);
-        let validReactions = answers.filter(answer => answer === this._options.includes(reaction.emoji.name));
-        return validReactions;
-      },
+      this.validateReaction,
       {
         time: this._time
       }
@@ -74,7 +74,7 @@ class VotingHandler {
   generateResultMessage(reactions) {
     let countsMessage = "";
     this._options.forEach(option => {
-      let count = reactions.get(option.emoji).count ?? 0;
+      let count = reactions.get(option.emoji)?.count ?? 0;
       countsMessage += `Total votes (${option.name}): ${count}\n`;
     });
 
@@ -90,6 +90,7 @@ class VotingHandler {
     return resultMessage;
 
   }
+
 }
 
 exports.VotingHandler = VotingHandler;
