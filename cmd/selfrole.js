@@ -17,15 +17,14 @@ exports.run = (msg, params, prefix) => {
 
     var notAllowed = ["Owner", "ADMIN BOT", "BOTS", "Higher-up Members", "Rythm", "MusicDOOOD", "Now Live", "Mee6",  "PatchBot", "fnbr.co"]
 
-    for(var currentStatIndex = 0; currentStatIndex < notAllowed.length; currentStatIndex++) {
-      if(SELF_ROLE == notAllowed[currentStatIndex]){
-        return msg.reply("You are not allowed to self assign the role: " + role.name)
-      }else{
-        return target.addRole(role.id).then(() => {
-          msg.channel.send(`You have been given the: "${role.name}" role!`)
-        })
-      }
+    let isRoleAddAllowed = !notAllowed.includes(SELF_ROLE);
+    if (!isRoleAddAllowed) {
+        msg.reply("You are not allowed to self assign the role: " + role.name);
+        return;
     }
+    target.addRole(role.id).then(() => {
+        msg.channel.send(`You have been given the: "${role.name}" role!`);
+    });
   }
 
 RoleChecker(role.name)
