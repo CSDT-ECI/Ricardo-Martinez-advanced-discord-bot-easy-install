@@ -119,3 +119,4 @@ Estas solo son pequeñas demostraciones de las ayudas que nos ofrece github copi
         }
     ```
 
+Esta herramienta puede ser bastante útil en casos donde el código sea muy viejo, no sea claro o solo no se haya hecho la debida documentación mientras se desarrollaba.
