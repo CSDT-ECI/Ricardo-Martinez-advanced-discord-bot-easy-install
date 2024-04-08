@@ -20,3 +20,37 @@ Se analizo el proyecto teniendo en cuenta las 3 dimensiones de DevEx
 - El proyecto tiene muy poca documentación, solo tiene los pasos básicos en el readme pero no es tan explicito con las instrucciones para ejecutar el bot. Una mejora en el proyecto que reduciría la carga cognitiva del desarrollador sería documentar explícitamente estos procesos de instalación y configuración en alguna especie de guía.
 - Otra mejora podría ser documentar los comandos del bot y mantener actualizado cuales funcionan, cuales no y cuales requieren configuraciones adicionales.
 
+## SPACE
+
+### Satisfaction and well-being
+No aplica.
+
+### Performance
+Podemos medir el rendimiento de las siguientes maneras:
+- Midiendo el tiempo de respuesta del bot a los comandos.
+- Observando el uso de recursos del bot, incluyendo CPU, memoria y almacenamiento.
+- Monitoreando la disponibilidad del bot, es decir, cuánto tiempo está en línea y disponible para responder a los comandos.
+- Rastreando la tasa de errores durante la ejecución del bot.
+- Evaluando la capacidad de carga del bot, o cuántos comandos puede manejar simultáneamente sin degradar el rendimiento.
+
+### Activity
+Podemos medir la actividad de las siguientes maneras:
+- Contando el número de tareas que el bot puede completar en un período de tiempo determinado.
+- Calculando la tasa de éxito de las tareas, o la proporción de tareas que el bot puede completar con éxito sin errores.
+- Calculando un contador o porcentaje de cuantos comandos están documentados.
+- Contando el número de pruebas ejecutadas por solicitud de cambios en el pipeline de integración continua.
+- Hacer un seguimiento y conteo de los errores encontrados y ajustados.
+
+### Communication and Collaboration
+Podemos medir la comunicación y la colaboración de las siguientes maneras:
+- Realizando encuestas para medir la calidad de la comunicación y facilidad de uso del bot.
+- Midiendo el tiempo que le cuesta a los desarrolladores desde cero entender el proyecto y poder trabajar en él.
+- Guardar reportes, peticiones y sugerencias respecto al bot que puedan tener los usuarios.
+
+Con una mejor documentación la colaboración del proyecto mejoraría bastaste.
+
+### Efficiency and Flow
+Podemos medir la eficiencia y el flujo de las siguientes maneras:
+- Contando el número de interrupciones que los usuarios experimentan al usar el software.
+- Contando el número de solicitud de cambios y revisiones.
+- Guardar los tiempos que suelen tomar las revisiones de las solicitudes de cambios.
