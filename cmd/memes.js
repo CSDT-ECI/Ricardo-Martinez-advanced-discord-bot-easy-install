@@ -41,3 +41,5 @@ exports.help = {
   description: "Get a random meme from reddit",
   usage: "memes"
 };
+
+exports.getRandomMeme = getRandomMeme;

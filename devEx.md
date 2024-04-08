@@ -54,3 +54,18 @@ Podemos medir la eficiencia y el flujo de las siguientes maneras:
 - Contando el número de interrupciones que los usuarios experimentan al usar el software.
 - Contando el número de solicitud de cambios y revisiones.
 - Guardar los tiempos que suelen tomar las revisiones de las solicitudes de cambios.
+
+
+## Herramientas IA
+
+### Github Copilot
+Como parte de la entrega anterior se realizo una [prueba](test/classes/voting-handler.test.js) para la clase [VotingHandler](src/classes/voting-handler.js) con el apoyo de github copilot. Podemos hacerle peticiones para generar documentación, pruebas, resolver bugs o implementar mejoras en nuestro código, etc. Sin embargo es importante resaltar que como su nombre lo indica es un copiloto, a veces lo que genera podría no servir o tener ciertos aspectos que nosotros debemos ajustar, pero aún así es una excelente herramienta con la que podemos mejorar nuestro código, en especial cuando se trata de realizar tareas repetitivas.
+
+**Demostraciones:**
+
+- Se le pidió que generara un set de pruebas para el archivo [memes.js](cmd/memes.js).
+
+    ![copilot-tests-generator](img/copilot-tests-generator.png)
+
+    El resultado del nuevo archivo de pruebas se encuentra en [test/cmd/memes.test.js](test/cmd/memes.test.js)
+
