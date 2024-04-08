@@ -63,7 +63,7 @@ Podemos medir la eficiencia y el flujo de las siguientes maneras:
 ### Github Copilot
 Como parte de la entrega anterior se realizo una [prueba](test/classes/voting-handler.test.js) para la clase [VotingHandler](src/classes/voting-handler.js) con el apoyo de github copilot. Podemos hacerle peticiones para generar documentación, pruebas, resolver bugs o implementar mejoras en nuestro código, etc. Sin embargo es importante resaltar que como su nombre lo indica es un copiloto, a veces lo que genera podría no servir o tener ciertos aspectos que nosotros debemos ajustar, pero aún así es una excelente herramienta con la que podemos mejorar nuestro código, en especial cuando se trata de realizar tareas repetitivas.
 
-**Demostraciones:**
+**Demostración:**
 
 - Se le pidió que generara un set de pruebas para el archivo [memes.js](cmd/memes.js).
 
@@ -77,3 +77,45 @@ Como parte de la entrega anterior se realizo una [prueba](test/classes/voting-ha
     ![copilot-explain](img/copilot-explain.png)
 
 Estas solo son pequeñas demostraciones de las ayudas que nos ofrece github copilot.
+
+### Mintlify
+
+[Mintlify](https://mintlify.com) es una herramienta muy buena y con versión gratuita que usa IA para generar la documentación de proyectos de código. Cuenta con funciones para analizar un proyecto y generar un API documentada, generar guías de configuración, documentar clases, funciones, etc.
+
+**Demostración:**
+
+- Se utilizo la extensión de VSCode para generar la documentación de la función `getRandomMeme`.
+
+    ![Mintlify](img/mintlify.png)
+
+    La extensión automáticamente detecto el lenguaje, entendió la función y genero la documentación.
+
+    ```JavaScript
+        /**
+         * The function `getRandomMeme` fetches a random meme from the r/memes subreddit on Reddit and returns its title, image URL, subreddit name, and permalink.
+         * @returns The `getRandomMeme` function returns a Promise that resolves to an object containing information about a random meme with the following properties:
+         * - `title`: The title of the meme post
+         * - `image`: The URL of the meme image
+         * - `subreddit`: The subreddit where the meme was posted
+         * - `permalink`: The permalink URL of the meme post on Reddit
+         *
+         * If there is an error during the fetching process, the function will return `null`.
+        */
+        async function getRandomMeme() {
+            try {
+                const response = await axios.get('https://www.reddit.com/r/memes/random/.json');
+                const post = response.data[0].data.children[0].data;
+                const meme = {
+                title: post.title,
+                image: post.url,
+                subreddit: post.subreddit,
+                permalink: `https://reddit.com${post.permalink}`
+                };
+                return meme;
+            } catch (error) {
+                console.error('Error fetching meme:', error);
+                return null;
+            }
+        }
+    ```
+
