@@ -75,3 +75,5 @@ Como parte de la entrega anterior se realizo una [prueba](test/classes/voting-ha
 - Se le pidió que explicará el index del proyecto.
 
     ![copilot-explain](img/copilot-explain.png)
+
+Estas solo son pequeñas demostraciones de las ayudas que nos ofrece github copilot.
