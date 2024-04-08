@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const VotingHandlerModule = require('../src/classes/voting-handler.js');
 
 const agree    = "✅";
 const disagree = "❎";
@@ -18,34 +19,24 @@ exports.run = async (bot, msg, params) => {
     return msg.reply(":x: " + "| i need the \"KICK_MEMBERS\" permission!").catch(console.error);
   }
 
-  let VOTE_TEXT = await msg.channel.send("Vote now! (10 Seconds)");
-  await VOTE_TEXT.react(agree);
-  await VOTE_TEXT.react(disagree);
+  const options = [
+    { name: "Yes", emoji: agree },
+    { name: "No", emoji: disagree},
+  ];
 
-  const reactions = await VOTE_TEXT.awaitReactions(reaction => reaction.emoji.name === agree || reaction.emoji.name === disagree, {time: 10000});
-  VOTE_TEXT.delete();
+  const voteText = `Do you want to kick ${kickmember.user.username}? Vote now! (10 Seconds)`;
+  const note = "NOTE: Votes needed to kick (3+)\n"
+  let votingHandler = new VotingHandlerModule.VotingHandler(
+      voteText,
+      options,
+      10000,
+      msg.channel,
+      note,
+  );
 
-  var NO_Count = reactions.get(disagree).count;
-  var YES_Count = reactions.get(agree);
-
-  if(YES_Count == undefined){
-    var YES_Count = 1;
-  }else{
-    var YES_Count = reactions.get(agree).count;
-  }
-
-  var sumsum = new Discord.RichEmbed()
-  
-            .addField("Voting Finished:", "----------------------------------------\n" +
-                                          "Total votes (NO): " + `${NO_Count-1}\n` +
-                                          "Total votes (Yes): " + `${YES_Count-1}\n` +
-                                          "----------------------------------------\n" +
-                                          "NOTE: Votes needed to kick (3+)\n" +
-                                          "----------------------------------------", true)
-
-            .setColor("0x#FF0000")
-
-  await msg.channel.send({embed: sumsum});
+  const reactions = await votingHandler.performVotingProcess();
+  const YES_Count = reactions.get(agree).count ?? 0;
+  const NO_Count = reactions.get(disagree).count ?? 0;
 
   if(YES_Count >= 4 && YES_Count > NO_Count){
 
