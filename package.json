@@ -4,19 +4,22 @@
   "description": "easy to use discord bot",
   "main": "index.js",
   "dependencies": {
+    "axios": "^1.6.8",
     "cheerio": "^1.0.0-rc.2",
-    "dankmemes": "^1.0.0",
     "discord.js": "^11.4.2",
     "get-json": "^1.0.1",
     "google-images": "^2.1.0",
-    "jimp": "^0.5.3",
+    "jest": "^29.7.0",
+    "jimp": "^0.22.12",
     "moment": "^2.22.2",
     "ms": "^2.1.1",
-    "request": "^2.88.0"
+    "request": "^2.88.2"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "npx jest",
+    "test:watch": "npx jest --watch",
+    "coverage": "npx jest --coverage --coverageDirectory=coverage"
   },
   "repository": {
     "type": "git",
