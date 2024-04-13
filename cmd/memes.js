@@ -1,6 +1,18 @@
+
 const Discord = require('discord.js');
 const axios = require('axios');
 
+
+/**
+ * The function `getRandomMeme` fetches a random meme from the r/memes subreddit on Reddit and returns its title, image URL, subreddit name, and permalink.
+ * @returns The `getRandomMeme` function returns a Promise that resolves to an object containing information about a random meme with the following properties:
+ * - `title`: The title of the meme post
+ * - `image`: The URL of the meme image
+ * - `subreddit`: The subreddit where the meme was posted
+ * - `permalink`: The permalink URL of the meme post on Reddit
+ *
+ * If there is an error during the fetching process, the function will return `null`.
+ */
 async function getRandomMeme() {
   try {
     const response = await axios.get('https://www.reddit.com/r/memes/random/.json');
@@ -41,3 +53,5 @@ exports.help = {
   description: "Get a random meme from reddit",
   usage: "memes"
 };
+
+exports.getRandomMeme = getRandomMeme;
