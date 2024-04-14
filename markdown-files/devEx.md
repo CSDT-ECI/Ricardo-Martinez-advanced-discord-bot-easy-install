@@ -12,7 +12,7 @@ Se analizo el proyecto teniendo en cuenta las 3 dimensiones de DevEx
 - Cómo parte de la entrega anterior [CSDT_PrimeraEntrega2024.md](CSDT_PrimeraEntrega2024.md) se realizo la integración de la herramienta de SonarCloud para recibir retroalimentación de esta herramienta en cada pull request o al subir cambios directamente a master.
 - En la entrega anterior también se realizo la configuración para poder ejecutar pruebas con el comando `npm run test`, generar la covertura con el comando `npm run coverage` y una ejecución de pruebas especial con el comando `npm run test:watch`. Todos los comandos agregados son una ayuda para retroalimentar información al desarrollador pero el comando `npm run test:watch` pienso tiene una mayor relevancia en este aspecto ya que si lo ejecutamos tendremos un menu activo en consola con el que podemos ir ejecutando las pruebas mientras vamos desarrollando.
 
-    ![test-watch](img/test-watch.png)
+    ![test-watch](/img/test-watch.png)
 
 - Cómo parte de esta entrega se agrego al workflow una github action para validar la instalación, construcción y ejecución de pruebas del proyecto. Con el objetivo de recibir la retroalimentación del estado de los paquetes y las pruebas en caso de que algo en los paquetes o en las pruebas este mal, tener esta verificación de manera automática antes de subir cualquier cambio y no dejarle toda la responsabilidad de esta validación a los desarrolladores.
 
@@ -61,20 +61,20 @@ Podemos medir la eficiencia y el flujo de las siguientes maneras:
 ## Herramientas IA
 
 ### Github Copilot
-Como parte de la entrega anterior se realizo una [prueba](test/classes/voting-handler.test.js) para la clase [VotingHandler](src/classes/voting-handler.js) con el apoyo de github copilot. Podemos hacerle peticiones para generar documentación, pruebas, resolver bugs, implementar mejoras en nuestro código, etc. Sin embargo es importante resaltar que como su nombre lo indica es un copiloto, a veces lo que genera podría no servir o tener ciertos aspectos que nosotros debemos ajustar, pero aún así es una excelente herramienta con la que podemos mejorar nuestro código, en especial cuando se trata de realizar tareas repetitivas.
+Como parte de la entrega anterior se realizo una [prueba](/test/classes/voting-handler.test.js) para la clase [VotingHandler](/src/classes/voting-handler.js) con el apoyo de github copilot. Podemos hacerle peticiones para generar documentación, pruebas, resolver bugs, implementar mejoras en nuestro código, etc. Sin embargo es importante resaltar que como su nombre lo indica es un copiloto, a veces lo que genera podría no servir o tener ciertos aspectos que nosotros debemos ajustar, pero aún así es una excelente herramienta con la que podemos mejorar nuestro código, en especial cuando se trata de realizar tareas repetitivas.
 
 **Demostración:**
 
-- Se le pidió que generara un set de pruebas para el archivo [memes.js](cmd/memes.js).
+- Se le pidió que generara un set de pruebas para el archivo [memes.js](/cmd/memes.js).
 
-    ![copilot-tests-generator](img/copilot-tests-generator.png)
+    ![copilot-tests-generator](/img/copilot-tests-generator.png)
 
-    El resultado del nuevo archivo de pruebas se encuentra en [test/cmd/memes.test.js](test/cmd/memes.test.js)
+    El resultado del nuevo archivo de pruebas se encuentra en [test/cmd/memes.test.js](/test/cmd/memes.test.js)
 
 
 - Se le pidió que explicará el index del proyecto.
 
-    ![copilot-explain](img/copilot-explain.png)
+    ![copilot-explain](/img/copilot-explain.png)
 
 Estas solo son pequeñas demostraciones de las ayudas que nos ofrece github copilot.
 
@@ -86,7 +86,7 @@ Estas solo son pequeñas demostraciones de las ayudas que nos ofrece github copi
 
 - Se utilizo la extensión de VSCode para generar la documentación de la función `getRandomMeme`.
 
-    ![Mintlify](img/mintlify.png)
+    ![Mintlify](/img/mintlify.png)
 
     La extensión automáticamente detecto el lenguaje, entendió la función y genero la documentación.
 
