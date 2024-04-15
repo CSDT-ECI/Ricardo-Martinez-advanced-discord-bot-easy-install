@@ -25,4 +25,4 @@ Los pasos principales que usa este trabajo son:
     ![Coverage Artifact](/img/coverage-artifact.png)
 
 ### 2. SonarCloud
-Contiene los pasos para escanear un proyecto usando la herramienta SonarCloud
+Escanea el proyecto en cada pull request abierto o reabierto, cuando se suban cambios a una rama con un PR abierto y cuando se suban cambios a la rama principal. usando la herramienta SonarCloud para revisar la calidad del código del proyecto, esto también incluye la cobertura de las pruebas más sobre la implementación de esta herramienta en [CSDT_PrimeraEntrega2024.md](CSDT_PrimeraEntrega2024.md)
