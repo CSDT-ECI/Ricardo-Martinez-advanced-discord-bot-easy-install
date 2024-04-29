@@ -82,6 +82,8 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
     - Información de las integraciones y las APIs que usa en ciertos comandos
     - Una lista de comandos.
 
+- El comando [prefix](/src/commands/prefix.js) debería ser eliminado o implementado de otra manera. El comando permite reasigna un nuevo prefijo para un servidor pero lo hace escribiendo en un archivo de texto plano dentro del proyecto (Lo que en ocasiones genera errores). Se recomienda el uso de una base de datos no relacional cómo [mongoDB](https://www.mongodb.com) para este tipo de comandos.
+
 ### Confiabilidad
 
 ❌ El bot es propenso a sufrir excepciones y no esta preparado para manejarlas. Al recibir una excepción o un error de algún tipo, detiene su ejecución.
@@ -120,7 +122,7 @@ El bot de discord presenta varios problemas relacionados con la arquitectura del
 ## Mejoras del proyecto en esta entrega
 
 - Los comandos y el index se movieron a la carpeta `src`
-- Se implemento el uso de variables de entorno con el paquete `dotenv`
+- Se implemento el uso de variables de entorno con el paquete `dotenv` y se modifico el index.
 
 
 ## Links útiles 🤖
