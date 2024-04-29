@@ -117,6 +117,12 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 ## Conclusiones
 El bot de discord presenta varios problemas relacionados con la arquitectura del proyecto que afectan la calidad del software. Los problemas identificados incluyen la falta de pruebas automatizadas, la falta de documentación, la falta de manejo de errores y la falta de medidas de seguridad para proteger las credenciales del bot. Se propusieron soluciones para mejorar la calidad del proyecto y garantizar que cumpla con los atributos de calidad relevantes.
 
+## Mejoras del proyecto en esta entrega
+
+- Los comandos y el index se movieron a la carpeta `src`
+- Se implemento el uso de variables de entorno con el paquete `dotenv`
+
+
 ## Links útiles 🤖
 
 - [Discord.js](https://discord.js.org/)

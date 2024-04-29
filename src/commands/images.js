@@ -1,5 +1,3 @@
-var settings = '../settingsConfig/settings.json';
-var file = require(settings)
 const GoogleImages = require('google-images');
 
 exports.run = (bot, msg, params) => {
@@ -8,7 +6,7 @@ exports.run = (bot, msg, params) => {
     return msg.channel.send("Please enter something to search for")
   }
 
-  const client = new GoogleImages(file.CSE, file.API);
+  const client = new GoogleImages(process.env.CSE, process.env.API);
     var search = client.search(params.join(" ")).then(function(images) {
       msg.channel.send(images[Math.floor(Math.random() * images.length)].url);
       });
