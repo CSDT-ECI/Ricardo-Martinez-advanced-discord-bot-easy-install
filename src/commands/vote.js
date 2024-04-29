@@ -1,4 +1,4 @@
-const VotingHandlerModule = require('../src/classes/voting-handler.js');
+const VotingHandlerModule = require('../classes/voting-handler.js');
 
 const agree = "✅";
 const disagree = "❎";
