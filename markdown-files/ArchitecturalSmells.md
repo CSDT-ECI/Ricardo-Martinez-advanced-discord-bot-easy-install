@@ -28,7 +28,7 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 
 ### Rendimiento
 
-✅ El bot es eficiente y no se encontraron problemas de rendimiento significativos, esto se debe directamente a al API de discord que maneja las peticiones de manera eficiente y rápida.
+✅ El bot es eficiente y no se encontraron problemas de rendimiento significativos, esto se debe directamente al API de discord que maneja las peticiones de manera eficiente y rápida.
 
 ### Usabilidad
 
