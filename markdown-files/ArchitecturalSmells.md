@@ -54,8 +54,8 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 
 ❌ El proyecto no cuenta con un sistema de carpetas.
 
-    - Todos los comandos están en una sola carpeta.
-    - Maneja todos los archivos de código desde la raíz, originalmente solo tenia el index y la carpeta cmd con todos los comandos.
+- Todos los comandos están en una sola carpeta.
+- Maneja todos los archivos de código desde la raíz, originalmente solo tenia el index y la carpeta cmd con todos los comandos.
 
 **Recomendaciones:**
 - Crear una carpeta para cada tipo de archivo (comandos, eventos, etc) dentro de la carpeta `src`.
