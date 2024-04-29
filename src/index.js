@@ -14,11 +14,11 @@ const log = (msg) => {
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
-fs.readdir("./cmd/", (err, files) => {
+fs.readdir("src/commands/", (err, files) => {
   if (err) console.error(err);
   log(`Loading a total of ${files.length} commands.`);
   files.forEach(f => {
-    let props = require(`./cmd/${f}`);
+    let props = require(`./commands/${f}`);
     log(`Loading Command: ${props.help.name}`);
     bot.commands.set(props.help.name, props);
     props.conf.aliases.forEach(alias => {
@@ -74,7 +74,7 @@ bot.reload = function (command) {
   return new Promise((resolve, reject) => {
     try {
       delete require.cache[require.resolve(`./cmd/${command}`)];
-      let cmd = require(`./cmd/${command}`);
+      let cmd = require(`./commands/${command}`);
       bot.commands.delete(command);
       bot.aliases.forEach((cmd, alias) => {
         if (cmd === command) bot.aliases.delete(alias);
