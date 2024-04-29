@@ -13,7 +13,7 @@ El bot de discord debe ser fácil de usar y comprender para los usuarios. La usa
 ### Mantenibilidad
 El código del bot debe ser fácil de mantener y extender. La mantenibilidad es un atributo de calidad importante para garantizar que el bot pueda evolucionar con el tiempo y adaptarse a los cambios en los requerimientos.
 
-El código del bot también debe estar documentado y con pruebas para los comandos. Para les sea más fácil a otros desarrolladores trabajar en él.
+El código del bot también debe estar documentado y con pruebas para los comandos. Para que les sea más fácil a otros desarrolladores trabajar en él.
 
 ### Confiabilidad
 El bot de discord debe ser confiable y estar disponible en todo momento. La confiabilidad es un atributo de calidad importante para garantizar que el bot pueda funcionar de manera consistente y sin errores.
@@ -34,7 +34,7 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 
 ✅ El código del bot cuenta con un comando de ayuda `help` que despliega una nota con información de todos los comandos.
 
-❌ Debido a la forma en la que se crean y se cargan los comandos estos no aparecen en el autocompletar del chat de discord ni aparecen como comandos disponibles. Estos e debe a que el bot guarda los comando en una lista de comandos interna pero no los comunica a discord.
+❌ Debido a la forma en la que se crean y se cargan los comandos estos no aparecen en el autocompletar del chat de discord ni aparecen como comandos disponibles. Esto se debe a que el bot guarda los comandos en una lista interna pero no los comunica a discord.
 
 **Recomendaciones:**
 
@@ -55,11 +55,11 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 ❌ El proyecto no cuenta con un sistema de carpetas.
 
     - Todos los comandos están en una sola carpeta.
-    - Maneja todos los archivos de código desde la raíz originalmente solo tenia el index y la carpeta cmd con todos los comandos.
+    - Maneja todos los archivos de código desde la raíz, originalmente solo tenia el index y la carpeta cmd con todos los comandos.
 
 **Recomendaciones:**
 - Crear una carpeta para cada tipo de archivo (comandos, eventos, etc) dentro de la carpeta `src`.
-- Ademas de diferencias por tipo de archivo separar los comandos en módulos para que sean más fáciles de encontrar y de diferenciar.
+- Ademas de diferenciar por tipo de archivo separar los comandos en módulos para una mejor estructura y organización del código.
 
     - admin: Este módulo podría contener comandos relacionados con la administración del servidor, como banear o desbanear usuarios, cambiar roles, etc.
 
@@ -105,12 +105,12 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 
 ### Comprobabilidad
 
-❌ El bot no cuenta con pruebas automatizadas para los comandos del bot, lo cual dificulta la validación y la detección de errores.
+❌ El bot no cuenta con pruebas automatizadas para los comandos, lo cual dificulta la validación y la detección de errores.
 
 **Recomendaciones:**
 
 - Crear pruebas automatizadas para los comandos del bot.
-- Implementar un sistema de integración continua para ejecutar las pruebas automáticamente. (Implementado en entregas anteriores)
+- Implementar un sistema de integración continua para ejecutar las pruebas automáticamente. (Ya implementado en entregas anteriores)
 
 ## Conclusiones
 El bot de discord presenta varios problemas relacionados con la arquitectura del proyecto que afectan la calidad del software. Los problemas identificados incluyen la falta de pruebas automatizadas, la falta de documentación, la falta de manejo de errores y la falta de medidas de seguridad para proteger las credenciales del bot. Se propusieron soluciones para mejorar la calidad del proyecto y garantizar que cumpla con los atributos de calidad relevantes.
