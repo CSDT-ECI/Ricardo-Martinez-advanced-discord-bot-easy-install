@@ -1,7 +1,7 @@
 const axios = require('axios');
 jest.mock('axios');
 
-const memes = require('../../cmd/memes');
+const memes = require('../../src/commands/memes');
 
 describe('memes', () => {
   describe('getRandomMeme', () => {
