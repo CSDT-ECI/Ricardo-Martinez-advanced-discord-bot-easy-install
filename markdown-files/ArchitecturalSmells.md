@@ -7,7 +7,7 @@ En el proyecto de desarrollo de un bot para discord se identificaron varios prob
 ### Rendimiento
 El bot de discord debe ser capaz de manejar un gran número de usuarios y servidores sin afectar su rendimiento. La velocidad de respuesta y la capacidad de procesamiento son atributos de calidad importantes para garantizar una experiencia fluida para los usuarios.
 
-## Usabilidad
+### Usabilidad
 El bot de discord debe ser fácil de usar y comprender para los usuarios. La usabilidad es un atributo de calidad importante para garantizar que los usuarios puedan interactuar con el bot de manera efectiva y sin problemas.
 
 ### Mantenibilidad
@@ -25,6 +25,7 @@ El bot de discord debe ser seguro y proteger la información sensible de los usu
 El bot de discord debe ser fácil de probar y validar para garantizar su calidad y su correcto funcionamiento. La comprobabilidad es un atributo de calidad importante para garantizar que el bot pueda ser probado y validado de manera efectiva.
 
 ## Análisis de arquitectura
+
 ### Rendimiento
 
 ✅ El bot es eficiente y no se encontraron problemas de rendimiento significativos, esto se debe directamente a al API de discord que maneja las peticiones de manera eficiente y rápida.
