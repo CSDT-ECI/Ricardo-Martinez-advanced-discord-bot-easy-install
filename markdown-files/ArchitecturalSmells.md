@@ -51,7 +51,24 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 
 ❌ El proyecto no cuenta con variables de entorno y tiene credenciales quemadas en el archivo settings.json
 
+❌ El proyecto no cuenta con un sistema de carpetas.
+
+    - Todos los comandos están en una sola carpeta.
+    - Maneja todos los archivos de código desde la raíz originalmente solo tenia el index y la carpeta cmd con todos los comandos.
+
 **Recomendaciones:**
+- Crear una carpeta para cada tipo de archivo (comandos, eventos, etc) dentro de la carpeta `src`.
+- Ademas de diferencias por tipo de archivo separar los comandos en módulos para que sean más fáciles de encontrar y de diferenciar.
+
+    - admin: Este módulo podría contener comandos relacionados con la administración del servidor, como banear o desbanear usuarios, cambiar roles, etc.
+
+    - fun: Este módulo podría contener comandos para interacciones divertidas, como juegos, información de juegos, chistes, memes, etc.
+
+    - info: Este módulo podría contener comandos útiles, como comandos para obtener información sobre el servidor o los usuario, etc.
+
+    - moderation: Este módulo podría contener comandos para la moderación del servidor, como eliminar mensajes, silenciar usuarios, etc.
+
+    - tools: Este módulo podría tener comandos con herramientas cómo por ejemplos los comandos que consultan apis externas.
 
 - Crear pruebas automatizadas para los comandos del bot.
 - Usar variables de entorno.
