@@ -2,7 +2,7 @@
 
 ## Integración Continua con Github Actions
 
-En entregas anteriores se hicieron las configuraciones para un flujo de trabajo usando github actions en el archivo [build.yml](/.github/workflows/build.yml) Donde hasta el momento hay definidos dos trabajos (Jobs):
+En entregas anteriores se hicieron las configuraciones para un flujo de trabajo usando github actions en el archivo [build.yml](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/.github/workflows/build.yml) Donde hasta el momento hay definidos dos trabajos (Jobs):
 
 1. Node CI
 2. SonarCloud
@@ -20,7 +20,7 @@ Los pasos principales que usa este trabajo son:
 Escanea el proyecto en cada pull request abierto o reabierto, cuando se suban cambios a una rama con un PR abierto y cuando se suban cambios a la rama principal. usando la herramienta SonarCloud para revisar la calidad del código del proyecto, esto también incluye la cobertura de las pruebas más sobre la implementación de esta herramienta en [CSDT_PrimeraEntrega2024.md](CSDT_PrimeraEntrega2024.md)
 
 ### 3. Code Coverage
-Se agregó un nuevo [workflow](/.github/workflows/code-coverage.yml) con dos acciones: `npm run coverage` para generar un reporte de cobertura y una nueva acción llamada 'Archive code coverage results' para guardar los resultados de cobertura en un artefacto.
+Se agregó un nuevo [workflow](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/.github/workflows/code-coverage.yml) con dos acciones: `npm run coverage` para generar un reporte de cobertura y una nueva acción llamada 'Archive code coverage results' para guardar los resultados de cobertura en un artefacto.
 
 Ahora cuando se suban cambios a la rama master se podrá descargar un zip con el reporte de cobertura de los cambios.
 
