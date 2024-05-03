@@ -5,7 +5,7 @@ exports.run = (bot, msg, params) => {
   let memberInfo = msg.mentions.members.first();
 
   if(!memberInfo){
-    var userinfo = new Discord.RichEmbed()
+    let userinfo = new Discord.RichEmbed()
         .addField("-----User info----- ",
                   "**Full Username: **" + `${msg.author.username}#${msg.author.discriminator}` + "\n" +
                   "**ID: **" + msg.author.id + "\n" +
@@ -17,7 +17,7 @@ exports.run = (bot, msg, params) => {
 
   }else{
 
-    var userinfoo = new Discord.RichEmbed()
+    let userinfoo = new Discord.RichEmbed()
         .addField("-----User info----- ",
                   "**Full Username: **" + `${memberInfo.user.username}#${memberInfo.user.discriminator}` + "\n" +
                   "**ID: **" + memberInfo.id + "\n" +

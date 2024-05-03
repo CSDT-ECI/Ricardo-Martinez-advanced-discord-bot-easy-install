@@ -1,14 +1,14 @@
-var request = require('request');
-var cheerio = require('cheerio');
+let request = require('request');
+let cheerio = require('cheerio');
 const Discord = require('discord.js')
 
 function getStatData(location , $){
   
-  var selector = $('.stats-stat .value').eq(location).text();
+  let selector = $('.stats-stat .value').eq(location).text();
 
-  var stat_array = $.parseHTML(selector);
+  let stat_array = $.parseHTML(selector);
 
-  var stat = 0;
+  let stat = 0;
 
   if(stat_array == null || stat_array.lengh == 0){
     return -1;
@@ -22,7 +22,7 @@ function getStatData(location , $){
 
 exports.run = (bot, msg, params) => {
 
-  var UR_L = "http://csgo.tracker.network/profile/" + params[0];
+  let UR_L = "http://csgo.tracker.network/profile/" + params[0];
   
           if(!params[0]){
             return msg.channel.send("Please Enter a valid STEAMID64 or custom url");
@@ -32,24 +32,24 @@ exports.run = (bot, msg, params) => {
   
               $ = cheerio.load(body);
   
-              var KD = getStatData(0, $);
+              let KD = getStatData(0, $);
               if(KD == -1){
                 msg.channel.send("Invalid, make sure your profile is not private and you have entered a valid STEAMID64 or Custom URL!");
                 return;
               }
 
-              var WIN = getStatData(1, $);
-              var HS = getStatData(4, $);
-              var MONEY = getStatData(5, $);
-              var SCORE = getStatData(6, $);
-              var KILLS = getStatData(7, $);
-              var DEATHS = getStatData(8, $);
-              var MVP = getStatData(9, $);
-              var BS = getStatData(13, $);
-              var BD = getStatData(14, $);
-              var HR = getStatData(15, $);
+              let WIN = getStatData(1, $);
+              let HS = getStatData(4, $);
+              let MONEY = getStatData(5, $);
+              let SCORE = getStatData(6, $);
+              let KILLS = getStatData(7, $);
+              let DEATHS = getStatData(8, $);
+              let MVP = getStatData(9, $);
+              let BS = getStatData(13, $);
+              let BD = getStatData(14, $);
+              let HR = getStatData(15, $);
   
-              var STAT = new Discord.RichEmbed()
+              let STAT = new Discord.RichEmbed()
   
               .setTitle("__***CSGO Stats***__")
               .setURL(UR_L)

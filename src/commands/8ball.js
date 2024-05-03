@@ -1,4 +1,4 @@
-var fortunes = [
+let fortunes = [
   "yes",
   "no",
   "maybe",

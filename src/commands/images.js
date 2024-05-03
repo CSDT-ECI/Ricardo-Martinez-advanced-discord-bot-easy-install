@@ -7,7 +7,7 @@ exports.run = (bot, msg, params) => {
   }
 
   const client = new GoogleImages(process.env.CSE, process.env.API);
-    var search = client.search(params.join(" ")).then(function(images) {
+    let search = client.search(params.join(" ")).then(function(images) {
       msg.channel.send(images[Math.floor(Math.random() * images.length)].url);
       });
 

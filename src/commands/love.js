@@ -1,4 +1,4 @@
-var Responses = [
+let Responses = [
   "yes",
   "no",
   "maybe",

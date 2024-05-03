@@ -1,12 +1,12 @@
 const Discord         = module.require('discord.js');
-var jimp              = require("jimp");
-var fs                = require('fs');
+let jimp              = require("jimp");
+let fs                = require('fs');
 
 exports.run = (bot, msg, params) => {
 
-  var fileName = './images/trump_original.png';
-  var imageCaption = params.join(" ");
-  var loadedImage;
+  let fileName = './images/trump_original.png';
+  let imageCaption = params.join(" ");
+  let loadedImage;
 
   if(imageCaption.length > 140){
     return msg.channel.send("Oops looks like what you are trying to get trump to tweet is over 140 characters, try again")

@@ -9,7 +9,7 @@ exports.run = (bot, msg, params) => {
       min = temp;
   }
 
-  var Result = Math.floor(Math.random() * (max - min + 1)) + min;
+  let Result = Math.floor(Math.random() * (max - min + 1)) + min;
 
   if(isNaN(Result)){
       return msg.channel.send("Please enter a min and a max number")

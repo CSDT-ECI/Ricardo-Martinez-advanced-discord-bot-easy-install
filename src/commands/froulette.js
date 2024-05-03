@@ -1,6 +1,6 @@
 const Discord = module.require('discord.js');
 
-var Places = [
+let Places = [
     "Junk Junction",
     "Haunted Hills",
     "Snobby Shores",

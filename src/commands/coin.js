@@ -1,4 +1,4 @@
-var hd = [
+let hd = [
   "Heads",
   "Tails"
 ];

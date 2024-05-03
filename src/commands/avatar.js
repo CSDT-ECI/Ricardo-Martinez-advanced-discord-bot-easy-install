@@ -2,7 +2,7 @@ const ms = require('ms')
 
 exports.run = async (bot, msg, params) => {
 
-  var get_message = await msg.channel.send("Generating avatar...");
+  let get_message = await msg.channel.send("Generating avatar...");
   let target = msg.mentions.users.first() || msg.author;
 
   await msg.channel.send({files: [

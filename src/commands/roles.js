@@ -4,7 +4,7 @@ exports.run = (bot, msg, params) => {
 
   ROLEZZ = msg.guild.roles.array()
   
-  var ROLES = "";
+  let ROLES = "";
 
     ROLEZZ.forEach(function(element){
         ROLES += element.name + "\n"

@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 
-var jokes = [
+let jokes = [
   "What time did the man go to the dentist? Tooth hurt-y",
   "I'm reading a book about anti-gravity. It's impossible to put down!",
   "Want to hear a joke about a piece of paper? Never mind... it's tearable.",
@@ -55,7 +55,7 @@ var jokes = [
 
 exports.run = (bot, msg, params) => {
 
-  var DAD = new Discord.RichEmbed()
+  let DAD = new Discord.RichEmbed()
       .setDescription(jokes[Math.floor(Math.random() * jokes.length)])
 
       .setColor("0x#FF0000")
