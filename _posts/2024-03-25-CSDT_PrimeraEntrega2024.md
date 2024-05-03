@@ -4,7 +4,7 @@ El objetivo de este archivo es consolidar los diferentes análisis y entregas qu
 ## Aportes Previos
 - [Refactoring + Code Smells]({{site.baseurl}}/2024/03/10/CSDT-2024#refactoring--code-smells)
 - [Clean Code + XP Practices]({{site.baseurl}}/2024/03/10/CSDT-2024#clean-code--xp-practices)
-- [Testing Debt](/markdown-files/TestingDebt.md)
+- [Testing Debt]({{site.baseurl}}/2024/03/17/TestingDebt.md)
 
 ## Tabla de contenidos
 - [SonarCloud](#sonarcloud)
@@ -75,7 +75,7 @@ La herramienta también clasifico los malos olores en 3 niveles de severidad.
 ### Coverage
 La herramienta encontró un 0% de cobertura (líneas cubiertas por pruebas) en el código del proyecto. Esto se debe a que el proyecto no cuenta con pruebas.
 
-El análisis sobre las posibles pruebas y recomendaciones para agregar pruebas al proyecto se encuentran en [Testing Debt](/markdown-files/TestingDebt.md).
+El análisis sobre las posibles pruebas y recomendaciones para agregar pruebas al proyecto se encuentran en [Testing Debt]({{site.baseurl}}/2024/03/17/TestingDebt.md).
 
 ### Duplications
 La herramienta encontró un 3% de duplicaciones de código. Después de revisar el reporte, este resultado se debe a que en los archivos [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/vote.js) y [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/votekick.js) se repite el siguiente bloque de código:
