@@ -17,7 +17,7 @@ Los pasos principales que usa este trabajo son:
 - Ejecutar `npm test` para validar que las pruebas se ejecuten y se cumplan correctamente.
 
 ### 2. SonarCloud
-Escanea el proyecto en cada pull request abierto o reabierto, cuando se suban cambios a una rama con un PR abierto y cuando se suban cambios a la rama principal. usando la herramienta SonarCloud para revisar la calidad del código del proyecto, esto también incluye la cobertura de las pruebas más sobre la implementación de esta herramienta en [CSDT_PrimeraEntrega2024.md](CSDT_PrimeraEntrega2024.md)
+Escanea el proyecto en cada pull request abierto o reabierto, cuando se suban cambios a una rama con un PR abierto y cuando se suban cambios a la rama principal. usando la herramienta SonarCloud para revisar la calidad del código del proyecto, esto también incluye la cobertura de las pruebas más sobre la implementación de esta herramienta en [CSDT_PrimeraEntrega2024.md]({{site.baseurl}}/2024/03/25/CSDT_PrimeraEntrega2024)
 
 ### 3. Code Coverage
 Se agregó un nuevo [workflow](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/.github/workflows/code-coverage.yml) con dos acciones: `npm run coverage` para generar un reporte de cobertura y una nueva acción llamada 'Archive code coverage results' para guardar los resultados de cobertura en un artefacto.
