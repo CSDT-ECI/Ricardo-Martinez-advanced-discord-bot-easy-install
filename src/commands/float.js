@@ -12,8 +12,8 @@ exports.run = (bot, msg, params) => {
         return msg.channel.send(":x: " + "| Please enter a valid inspect link for your awesome skin/weapon");
       }
 
-    FLOAT_COLOR = "";
-    FLOAT_NAME = "";
+    let FLOAT_COLOR = "";
+    let FLOAT_NAME = "";
 
     if(data.iteminfo.floatvalue >= 0.44 && data.iteminfo.floatvalue < 1){
         FLOAT_COLOR = "0x#FF0000";
