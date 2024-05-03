@@ -1,6 +1,7 @@
 exports.run = (bot, msg, params, perms, prefix) => {
     if (!params[0]) {
-      msg.channel.send(`= Command List =\n\n[Use ${prefix}help <commandname> for details]\n\n${bot.commands.map(c=>`${c.help.name}:: ${c.help.description}`).join("\n")}`, {code: "asciidoc"});
+      let commandsHelp = bot.commands.map(c=>`${c.help.name}:: ${c.help.description}`).join("\n")
+      msg.channel.send(`= Command List =\n\n[Use ${prefix}help <commandname> for details]\n\n${commandsHelp}`, {code: "asciidoc"});
   } else {
     let command = params[0];
     if(bot.commands.has(command)) {
