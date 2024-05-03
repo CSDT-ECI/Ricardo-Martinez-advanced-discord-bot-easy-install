@@ -2,4 +2,4 @@ theme: minima
 author: Ricardo Martinez
 exclude: ["README.md"]
 include:
-  - "/img/*"
+  - "img"
