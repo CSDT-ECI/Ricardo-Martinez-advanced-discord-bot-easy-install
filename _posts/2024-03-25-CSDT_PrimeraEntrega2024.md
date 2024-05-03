@@ -23,12 +23,12 @@ El objetivo de este archivo es consolidar los diferentes análisis y entregas qu
 ## Sonarcloud
 Se realizó un primer análisis del código actual del proyecto usando la herramienta SonarCloud y arrojo los siguientes resultados:
 
-![sonarcloud-first-analysis](/img/sonarcloud-first-analysis.png)
+![sonarcloud-first-analysis]({{site.baseurl}}/img/sonarcloud-first-analysis.png)
 
 ### Reliability
 Se obtuvo una calificación de C en esta métrica. Lo que quiere decir que la aplicación cuenta con al menos un bug mayor.
 
-![Reliability bug](/img/self-role-reliability-bug.png)
+![Reliability bug]({{site.baseurl}}/img/self-role-reliability-bug.png)
 
 Después de revisar el reporte se encontró que el bug que reporta se encuentra en el archivo [selfrole.js](/cmd/selfrole.js) en el ciclo de la función RoleChecker que valida los roles.
 
@@ -70,7 +70,7 @@ La herramienta encontró un total de 89 malos olores y obtuvo una calificación 
 
 La herramienta también clasifico los malos olores en 3 niveles de severidad.
 
-![code-smells-severity](/img/code-smells-severity.png)
+![code-smells-severity]({{site.baseurl}}/img/code-smells-severity.png)
 
 ### Coverage
 La herramienta encontró un 0% de cobertura (líneas cubiertas por pruebas) en el código del proyecto. Esto se debe a que el proyecto no cuenta con pruebas.
@@ -155,7 +155,7 @@ Con esta solución no solo se evita el código duplicado, sino que queda abierta
 ### NPM
 La herramienta de paquetes de node encontró 20 vulnerabilidades en los paquetes instalados y especificados en los archivos package*.json
 
-![packages warn](/img/packages-warning.png)
+![packages warn]({{site.baseurl}}/img/packages-warning.png)
 
 Para revisar a detalle los paquetes que necesitan actualización se ejecuta el siguiente comando:
 ```properties
@@ -169,7 +169,7 @@ npm audit fix --force
 
 La herramienta solo pudo actualizar algunos paquetes:
 
-![packages audited](/img/packages-audited.png)
+![packages audited]({{site.baseurl}}/img/packages-audited.png)
 
 Después de revisar los demás paquetes que presentan vulnerabilidades, se encontró que son los paquetes `dankmemes` que solo se usa en el archivo [memes.js](/cmd/memes.js) para generar memes, el paquete `google-images` que se usa en el comando [images.js](/cmd/images.js) para generar imágenes usando el api de google y el paquete `requests` que se usa para hacer una petición a una página y obtener la información html de un perfil en el comando [csgo.js](/cmd/csgo.js).
 
@@ -177,11 +177,11 @@ Después de revisar los demás paquetes que presentan vulnerabilidades, se encon
 
     Presenta la mayor cantidad de vulnerabilidades, 7 altas y 1 moderada. Sin mencionar que tal vez debido a la antigüedad del paquete usado, el comando genera un error cuando se usa.
 
-    ![Memes Error](/img/memes-error.png)
+    ![Memes Error]({{site.baseurl}}/img/memes-error.png)
 
     Para mitigar estas vulnerabilidades que parecen ser las más graves se ajusto el comando de memes para consultar una url que genera memes de manera aleatoria usando axios en el archivo [memes.js](/cmd/memes.js).
 
-    ![Meme displayed](/img/meme-displayed.png)
+    ![Meme displayed]({{site.baseurl}}/img/meme-displayed.png)
 
 - google-images
 
@@ -195,7 +195,7 @@ Después de revisar los demás paquetes que presentan vulnerabilidades, se encon
 
 Al actualizar los paquetes y ajustar el comando de memes se redujeron bastante las vulnerabilidades de paquetes que se reportaron.
 
-![Packages Remaining Vulnerabilities](/img/packages-remaining-vulnerabilities.png)
+![Packages Remaining Vulnerabilities]({{site.baseurl}}/img/packages-remaining-vulnerabilities.png)
 
 ### Pruebas
 
@@ -203,7 +203,7 @@ Cómo parte de esta entrega se realizaron las configuraciones necesarias para ej
 
 Y cómo primer acercamiento a la implementación de pruebas de este proyecto se creó el archivo de pruebas [voting-handler.test.js](/test/classes/voting-handler.test.js) para realizar la prueba de la nueva clase y validar la ejecución de pruebas en el proyecto.
 
-![Voting Handler Test](/img/voting-handler-test.png)
+![Voting Handler Test]({{site.baseurl}}/img/voting-handler-test.png)
 
 
 ## Conclusiones

@@ -24,7 +24,7 @@ Se agregó un nuevo [workflow](/.github/workflows/code-coverage.yml) con dos acc
 
 Ahora cuando se suban cambios a la rama master se podrá descargar un zip con el reporte de cobertura de los cambios.
 
-![Coverage Artifact](/img/coverage-artifact.png)
+![Coverage Artifact]({{site.baseurl}}/img/coverage-artifact.png)
 
 ### 4. Code QL
 Code QL es una herramienta de análisis estático de código desarrollada por GitHub que nos ayuda a identificar vulnerabilidades y errores en el código y los resultados los muestra como alertas en github.
@@ -33,7 +33,7 @@ Su principal característica en cuanto a seguridad es que utiliza una **Base de 
 
 Para esta entrega se configuro una nueva acción que usa esta herramienta para analizar los archivos en cada pull request o cambio subido a master. Lo que hace la acción es consultar de la base de conocimientos un paquete de vulnerabilidades de javascript y revisa todos los archivos con el objetivo de validar que no se encuentren vulnerabilidades en el código del proyecto. Si las hay las muestra cómo un error en la pestaña de seguridad del proyecto y el check de la acción pasa a fallido.
 
-![Code QL](/img/code-ql.png)
+![Code QL]({{site.baseurl}}/img/code-ql.png)
 
 
 ### 5. Dependency Review
@@ -41,8 +41,8 @@ La revisión de dependencias es una herramienta que permite detectar las depende
 
 La herramienta revisa los archivos de manifiesto que tengan cambios en la rama, y reporta el estado de las dependencias y los archivos con un puntaje de seguridad en un comentario dentro del PR que se actualiza con cada cambio, si encuentra que se esta agregando alguna dependencia insegura la acción falla.
 
-![Dependency Review 1](/img/dependency-review-1.png)
-![Dependency Review 2](/img/dependency-review-2.png)
+![Dependency Review 1]({{site.baseurl}}/img/dependency-review-1.png)
+![Dependency Review 2]({{site.baseurl}}/img/dependency-review-2.png)
 
 ## Resultados
 Con estas configuraciones se logra tener un flujo de trabajo automatizado que valida la calidad del código, la cobertura de las pruebas y la seguridad del proyecto en cada solicitud de cambios y en cada cambio que se suba a la rama master.
