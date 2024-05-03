@@ -40,7 +40,7 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
 
 ✅ El código del bot cuenta con un comando de ayuda `help` que despliega una nota con información de todos los comandos.
 
-![help command](/img/help-command-sample.png)
+![help command]({{site.baseurl}}/img/help-command-sample.png)
 
 ❌ Debido a la forma en la que se crean y se cargan los comandos estos no aparecen en el autocompletar del chat de discord ni aparecen como comandos disponibles. Esto se debe a que el bot guarda los comandos en una lista interna pero no los comunica a discord.
 
