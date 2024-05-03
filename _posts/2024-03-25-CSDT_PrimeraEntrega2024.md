@@ -106,7 +106,7 @@ La herramienta encontró un 3% de duplicaciones de código. Después de revisar 
 Para solucionar esto la propuesta es crear una clase con las funciones para ejecutar el proceso de votación y que la usen los comandos [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/vote.js) y [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/votekick.js).
 
 
-[Voting Handler Class](/src/classes/voting-handler.js)
+[Voting Handler Class](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/classes/voting-handler.js)
 
 Usando esta clase, el código que implementarian los comandos sería:
 
