@@ -1,4 +1,10 @@
+---
+title: "Deuda de arquitectura bot discord"
+date: 2024-04-28
+---
+
 # Deuda de arquitectura bot discord
+
 ## Introducción
 En el proyecto de desarrollo de un bot para discord se identificaron varios problemas relacionados con la arquitectura del proyecto, los cuales se presentan en este documento. El objetivo de este documento es identificar atributos de calidad relevantes para la construcción de un bot de discord, identificar los problemas de arquitectura y proponer soluciones para mejorar la calidad del proyecto.
 
