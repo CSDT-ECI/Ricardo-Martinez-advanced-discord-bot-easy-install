@@ -201,7 +201,7 @@ Al actualizar los paquetes y ajustar el comando de memes se redujeron bastante l
 
 Cómo parte de esta entrega se realizaron las configuraciones necesarias para ejecutar pruebas unitarias de manera local con el comando `npm run test`, generar un informe de cobertura con el comando `npm run coverage` y revisar el nivel de cobertura en la herramienta de sonar con jest.
 
-Y cómo primer acercamiento a la implementación de pruebas de este proyecto se creó el archivo de pruebas [voting-handler.test.js](/test/classes/voting-handler.test.js) para realizar la prueba de la nueva clase y validar la ejecución de pruebas en el proyecto.
+Y cómo primer acercamiento a la implementación de pruebas de este proyecto se creó el archivo de pruebas [voting-handler.test.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/test/classes/voting-handler.test.js) para realizar la prueba de la nueva clase y validar la ejecución de pruebas en el proyecto.
 
 ![Voting Handler Test]({{site.baseurl}}/img/voting-handler-test.png)
 
