@@ -2,8 +2,8 @@
 El objetivo de este archivo es consolidar los diferentes análisis y entregas que se han hecho hasta la fecha sobre el estado de calidad del proyecto y agregar nuevos aportes, análisis y conclusiones de este.
 
 ## Aportes Previos
-- [Refactoring + Code Smells](/_posts/2024-03-10-CSDT-2024.md#refactoring--code-smells)
-- [Clean Code + XP Practices](/markdown-files/CSDT-2024.md#clean-code--xp-practices)
+- [Refactoring + Code Smells]({{site.baseurl}}/2024/03/10/CSDT-2024#refactoring--code-smells)
+- [Clean Code + XP Practices]({{site.baseurl}}/2024/03/10/CSDT-2024#clean-code--xp-practices)
 - [Testing Debt](/markdown-files/TestingDebt.md)
 
 ## Tabla de contenidos
