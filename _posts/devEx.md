@@ -65,11 +65,11 @@ Como parte de la entrega anterior se realizo una [prueba](/test/classes/voting-h
 
 **Demostración:**
 
-- Se le pidió que generara un set de pruebas para el archivo [memes.js](/cmd/memes.js).
+- Se le pidió que generara un set de pruebas para el archivo [memes.js]({{site.baseurl}}/src/commands/memes.js).
 
     ![copilot-tests-generator]({{site.baseurl}}/img/copilot-tests-generator.png)
 
-    El resultado del nuevo archivo de pruebas se encuentra en [test/cmd/memes.test.js](/test/cmd/memes.test.js)
+    El resultado del nuevo archivo de pruebas se encuentra en [test{{site.baseurl}}/src/commands/memes.test.js](/test{{site.baseurl}}/src/commands/memes.test.js)
 
 
 - Se le pidió que explicará el index del proyecto.
