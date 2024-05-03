@@ -1,7 +1,9 @@
 ---
-title: Bienvenido al blog sobre los avances de calidad del proyecto de un bot de discord
+title: Bienvenida
 tags: blog
 ---
+
+# Bienvenido al blog sobre los avances de calidad del proyecto de un bot de discord
 
 ## Objetivo
 Este blog tiene como objetivo mostrar los avances de calidad del proyecto de un bot de discord.
