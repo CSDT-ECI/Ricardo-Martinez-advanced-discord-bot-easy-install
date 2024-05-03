@@ -2,19 +2,19 @@ const Discord = require('discord.js');
 
 exports.run = (bot, msg, params) => {
 
-  ROLEZZ = msg.guild.roles.array()
-  
+  let ROLEZZ = msg.guild.roles.array()
+
   let ROLES = "";
 
-    ROLEZZ.forEach(function(element){
-        ROLES += element.name + "\n"
-    });
-    
-    msg.channel.send("```" + "\n" +
-                         "---------------------------------" + "\n" +
-                         "ALL SERVER ROLES" + "\n" +
-                         "---------------------------------" + "\n" +
-                         `${ROLES}` + "```");
+  ROLEZZ.forEach(function (element) {
+    ROLES += element.name + "\n"
+  });
+
+  msg.channel.send("```" + "\n" +
+    "---------------------------------" + "\n" +
+    "ALL SERVER ROLES" + "\n" +
+    "---------------------------------" + "\n" +
+    `${ROLES}` + "```");
 
 
 };
