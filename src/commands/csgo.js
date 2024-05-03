@@ -22,7 +22,7 @@ function getStatData(location, $) {
 
 exports.run = (bot, msg, params) => {
 
-  let UR_L = "http://csgo.tracker.network/profile/" + params[0];
+  let UR_L = process.env.CSGO_PROFILE_URL + params[0];
 
   if (!params[0]) {
     return msg.channel.send("Please Enter a valid STEAMID64 or custom url");
