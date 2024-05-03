@@ -9,8 +9,6 @@ exports.run = (bot, msg, params) => {
     }else if(messagecount < 2 ) {
       msg.channel.send(":x: " + "| Sorry, You can only clean upto 100 messages at a time!")
     } else {
-  
-    }{
       msg.channel.fetchMessages({limit: messagecount}).then(messages => msg.channel.bulkDelete(messages, true));
     }
 
