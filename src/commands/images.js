@@ -2,14 +2,14 @@ const GoogleImages = require('google-images');
 
 exports.run = (bot, msg, params) => {
 
-  if(!params[0]){
+  if (!params[0]) {
     return msg.channel.send("Please enter something to search for")
   }
 
   const client = new GoogleImages(process.env.CSE, process.env.API);
-    let search = client.search(params.join(" ")).then(function(images) {
-      msg.channel.send(images[Math.floor(Math.random() * images.length)].url);
-      });
+  client.search(params.join(" ")).then(function (images) {
+    msg.channel.send(images[Math.floor(Math.random() * images.length)].url);
+  });
 
 };
 
