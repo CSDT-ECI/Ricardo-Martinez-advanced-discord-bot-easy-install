@@ -10,7 +10,7 @@ Se analizo el proyecto teniendo en cuenta las 3 dimensiones de DevEx
 **Estado actual de esta versión del proyecto**
 
 - Cómo parte de la entrega anterior [CSDT_PrimeraEntrega2024.md](CSDT_PrimeraEntrega2024.md) se realizo la integración de la herramienta de SonarCloud para recibir retroalimentación de esta herramienta en cada pull request o al subir cambios directamente a master.
-- En la entrega anterior también se realizo la configuración para poder ejecutar pruebas con el comando `npm run test`, generar la covertura con el comando `npm run coverage` y una ejecución de pruebas especial con el comando `npm run test:watch`. Todos los comandos agregados son una ayuda para retroalimentar información al desarrollador pero el comando `npm run test:watch` pienso tiene una mayor relevancia en este aspecto ya que si lo ejecutamos tendremos un menu activo en consola con el que podemos ir ejecutando las pruebas mientras vamos desarrollando.
+- En la entrega anterior también se realizo la configuración para poder ejecutar pruebas con el comando `npm run test`, generar la cobertura con el comando `npm run coverage` y una ejecución de pruebas especial con el comando `npm run test:watch`. Todos los comandos agregados son una ayuda para retroalimentar información al desarrollador pero el comando `npm run test:watch` pienso tiene una mayor relevancia en este aspecto ya que si lo ejecutamos tendremos un menu activo en consola con el que podemos ir ejecutando las pruebas mientras vamos desarrollando.
 
     ![test-watch](/img/test-watch.png)
 
