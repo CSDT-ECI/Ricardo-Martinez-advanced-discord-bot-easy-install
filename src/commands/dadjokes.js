@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 
-var jokes = [
+let jokes = [
   "What time did the man go to the dentist? Tooth hurt-y",
   "I'm reading a book about anti-gravity. It's impossible to put down!",
   "Want to hear a joke about a piece of paper? Never mind... it's tearable.",
@@ -26,7 +26,7 @@ var jokes = [
   "5/4 of people admit that they’re bad with fractions.",
   "MOM: \"How do I look?\" DAD: \"With your eyes.\"",
   "What is Beethoven’s favorite fruit? A ba-na-na-na.",
-  "What did the horse say after it tripped? \"Help! I’ve fallen and I can’t giddyup!\”",
+  "What did the horse say after it tripped? \"Help! I’ve fallen and I can’t giddyup! \"",
   "Did you hear about the circus fire? It was in tents!",
   "Don't trust atoms. They make up everything!",
   "What do you get when you cross an elephant with a rhino? Elephino.",
@@ -37,7 +37,7 @@ var jokes = [
   "What do you call a dog that can do magic? A Labracadabrador.",
   "Why didn't the vampire attack Taylor Swift? She had bad blood.",
   "NURSE: \"Blood type?\" DAD: \"Red.\"",
-  "SERVER: \"Sorry about your wait.\" DAD: \"Are you saying I’m fat?\”",
+  "SERVER: \"Sorry about your wait.\" DAD: \"Are you saying I’m fat? \"",
   "What do you call a fish with two knees? A “two-knee” fish.",
   "I was interrogated over the theft of a cheese toastie. Man, they really grilled me.",
   "What do you get when you cross a snowman with a vampire? Frostbite.",
@@ -55,7 +55,7 @@ var jokes = [
 
 exports.run = (bot, msg, params) => {
 
-  var DAD = new Discord.RichEmbed()
+  let DAD = new Discord.RichEmbed()
       .setDescription(jokes[Math.floor(Math.random() * jokes.length)])
 
       .setColor("0x#FF0000")

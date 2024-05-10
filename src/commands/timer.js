@@ -1,4 +1,4 @@
-var ms = require('ms')
+let ms = require('ms')
 
 exports.run = (bot, msg, params) => {
 

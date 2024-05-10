@@ -1,5 +1,5 @@
-var getJSON = require('get-json');
-var Discord = require('discord.js');
+let getJSON = require('get-json');
+let Discord = require('discord.js');
 
 exports.run = (bot, msg, params) => {
 
@@ -12,8 +12,8 @@ exports.run = (bot, msg, params) => {
         return msg.channel.send(":x: " + "| Please enter a valid inspect link for your awesome skin/weapon");
       }
 
-    FLOAT_COLOR = "";
-    FLOAT_NAME = "";
+    let FLOAT_COLOR = "";
+    let FLOAT_NAME = "";
 
     if(data.iteminfo.floatvalue >= 0.44 && data.iteminfo.floatvalue < 1){
         FLOAT_COLOR = "0x#FF0000";
@@ -40,7 +40,7 @@ exports.run = (bot, msg, params) => {
         FLOAT_NAME = "Factory New";
     }
 
-      var float = new Discord.RichEmbed()
+      let float = new Discord.RichEmbed()
 
       .addField("-----Weapon Stats----- ",
                 "**Full Name: **" + data.iteminfo.weapon_type + " | " + data.iteminfo.item_name + ` (${FLOAT_NAME})` + "\n" +

@@ -1,6 +1,6 @@
-var settings  = '../settingsConfig/settings.json';
-var file = require(settings)
-var fs  = require('fs')
+let settings  = '../settingsConfig/settings.json';
+let file = require(settings)
+let fs  = require('fs')
 
 exports.run = (bot, msg, params) => {
 
@@ -8,7 +8,7 @@ exports.run = (bot, msg, params) => {
       return msg.channel.send(":x: " + "| Please Enter a prefix ¯\\_(ツ)_/¯")
     }
 
-    var prefix_val = params[0];
+    let prefix_val = params[0];
     file.prefix[msg.guild.id] = prefix_val;
 
     fs.writeFile(settings, JSON.stringify(file, null, 2), function (err) {

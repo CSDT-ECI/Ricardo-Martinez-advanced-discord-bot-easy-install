@@ -3,10 +3,9 @@ const bot     = new Discord.Client({fetchAllMembers: true});
 const fs      = require("fs");
 const moment  = require("moment");
 
-var settings  = './settingsConfig/settings.json';
-var file = require(settings)
+require('dotenv').config()
 
-var TOKEN = file.TOKEN;
+let TOKEN = process.env.TOKEN;
 
 const log = (msg) => {
   console.log(`[${moment().format("YYYY-MM-DD HH:mm:ss")}] ${msg}`);
@@ -14,11 +13,11 @@ const log = (msg) => {
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
-fs.readdir("./cmd/", (err, files) => {
+fs.readdir("src/commands/", (err, files) => {
   if (err) console.error(err);
   log(`Loading a total of ${files.length} commands.`);
   files.forEach(f => {
-    let props = require(`./cmd/${f}`);
+    let props = require(`./commands/${f}`);
     log(`Loading Command: ${props.help.name}`);
     bot.commands.set(props.help.name, props);
     props.conf.aliases.forEach(alias => {
@@ -34,7 +33,7 @@ bot.on("guildMemberAdd", function(member) {
 
 bot.on("message", msg => {
 
-  var prefix = (file.prefix[msg.guild.id] == undefined) ? file.prefix["default"] : file.prefix[msg.guild.id];
+  let prefix = process.env.PREFIX;
 
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
@@ -51,7 +50,7 @@ bot.on("message", msg => {
     cmd = bot.commands.get(bot.aliases.get(command));
   }
   if (cmd) {
-    if (perms < cmd.conf.permLevel) return msg.channel.send("oops looks like you dont have the right permission level :(");
+    if (perms < cmd.conf.permLevel) return msg.channel.send("oops looks like you don't have the right permission level :(");
     cmd.run(bot, msg, params, perms, prefix);
   }
 });
@@ -74,7 +73,7 @@ bot.reload = function (command) {
   return new Promise((resolve, reject) => {
     try {
       delete require.cache[require.resolve(`./cmd/${command}`)];
-      let cmd = require(`./cmd/${command}`);
+      let cmd = require(`./commands/${command}`);
       bot.commands.delete(command);
       bot.aliases.forEach((cmd, alias) => {
         if (cmd === command) bot.aliases.delete(alias);
@@ -86,7 +85,7 @@ bot.reload = function (command) {
       });
       resolve();
     } catch (e) {
-      reject(e);
+      reject(new Error(e));
     }
   });
 };

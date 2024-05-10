@@ -15,7 +15,7 @@ exports.run = (msg, params, prefix) => {
 
   function RoleChecker(SELF_ROLE){
 
-    var notAllowed = ["Owner", "ADMIN BOT", "BOTS", "Higher-up Members", "Rythm", "MusicDOOOD", "Now Live", "Mee6",  "PatchBot", "fnbr.co"]
+    let notAllowed = ["Owner", "ADMIN BOT", "BOTS", "Higher-up Members", "Rythm", "MusicDOOOD", "Now Live", "Mee6",  "PatchBot", "fnbr.co"]
 
     let isRoleAddAllowed = !notAllowed.includes(SELF_ROLE);
     if (!isRoleAddAllowed) {
