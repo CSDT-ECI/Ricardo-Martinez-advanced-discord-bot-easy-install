@@ -1,5 +1,5 @@
 ---
-title: Bienvenida
+title: Welcome Page
 tags: blog
 ---
 
