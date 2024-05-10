@@ -35,7 +35,7 @@ Se obtuvo una calificación de C en esta métrica. Lo que quiere decir que la ap
 
 ![Reliability bug]({{site.baseurl}}/img/self-role-reliability-bug.png)
 
-Después de revisar el reporte se encontró que el bug que reporta se encuentra en el archivo [selfrole.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/selfrole.js) en el ciclo de la función RoleChecker que valida los roles.
+Después de revisar el reporte se encontró que el bug que reporta se encuentra en el archivo [selfrole.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/selfrole.js) en el ciclo de la función RoleChecker que valida los roles.
 
 ```javascript
 for(var currentStatIndex = 0; currentStatIndex < notAllowed.length; currentStatIndex++) {
@@ -83,7 +83,7 @@ La herramienta encontró un 0% de cobertura (líneas cubiertas por pruebas) en e
 El análisis sobre las posibles pruebas y recomendaciones para agregar pruebas al proyecto se encuentran en [Testing Debt]({{site.baseurl}}/2024/03/17/TestingDebt).
 
 ### Duplications
-La herramienta encontró un 3% de duplicaciones de código. Después de revisar el reporte, este resultado se debe a que en los archivos [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/vote.js) y [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/votekick.js) se repite el siguiente bloque de código:
+La herramienta encontró un 3% de duplicaciones de código. Después de revisar el reporte, este resultado se debe a que en los archivos [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/vote.js) y [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/votekick.js) se repite el siguiente bloque de código:
 
 
 ```javascript
@@ -108,14 +108,14 @@ La herramienta encontró un 3% de duplicaciones de código. Después de revisar 
                                           "Total votes (NO): " + `${NO_Count-1}\n` +
                                           "Total votes (Yes): " + `${YES_Count-1}\n` +
 ```
-Para solucionar esto la propuesta es crear una clase con las funciones para ejecutar el proceso de votación y que la usen los comandos [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/vote.js) y [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/votekick.js).
+Para solucionar esto la propuesta es crear una clase con las funciones para ejecutar el proceso de votación y que la usen los comandos [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/vote.js) y [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/votekick.js).
 
 
 [Voting Handler Class](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/classes/voting-handler.js)
 
 Usando esta clase, el código que implementarian los comandos sería:
 
-- [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/vote.js)
+- [vote.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/vote.js)
 
     ```Javascript
     const options = [
@@ -133,7 +133,7 @@ Usando esta clase, el código que implementarian los comandos sería:
     ```
 
 
-- [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/votekick.js)
+- [votekick.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/votekick.js)
 
     ```Javascript
     const options = [
@@ -176,7 +176,7 @@ La herramienta solo pudo actualizar algunos paquetes:
 
 ![packages audited]({{site.baseurl}}/img/packages-audited.png)
 
-Después de revisar los demás paquetes que presentan vulnerabilidades, se encontró que son los paquetes `dankmemes` que solo se usa en el archivo [memes.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/memes.js) para generar memes, el paquete `google-images` que se usa en el comando [images.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/images.js) para generar imágenes usando el api de google y el paquete `requests` que se usa para hacer una petición a una página y obtener la información html de un perfil en el comando [csgo.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/csgo.js).
+Después de revisar los demás paquetes que presentan vulnerabilidades, se encontró que son los paquetes `dankmemes` que solo se usa en el archivo [memes.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/memes.js) para generar memes, el paquete `google-images` que se usa en el comando [images.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/images.js) para generar imágenes usando el api de google y el paquete `requests` que se usa para hacer una petición a una página y obtener la información html de un perfil en el comando [csgo.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/csgo.js).
 
 - dankmemes
 
@@ -184,7 +184,7 @@ Después de revisar los demás paquetes que presentan vulnerabilidades, se encon
 
     ![Memes Error]({{site.baseurl}}/img/memes-error.png)
 
-    Para mitigar estas vulnerabilidades que parecen ser las más graves se ajusto el comando de memes para consultar una url que genera memes de manera aleatoria usando axios en el archivo [memes.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/memes.js).
+    Para mitigar estas vulnerabilidades que parecen ser las más graves se ajusto el comando de memes para consultar una url que genera memes de manera aleatoria usando axios en el archivo [memes.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/memes.js).
 
     ![Meme displayed]({{site.baseurl}}/img/meme-displayed.png)
 
@@ -206,7 +206,7 @@ Al actualizar los paquetes y ajustar el comando de memes se redujeron bastante l
 
 Cómo parte de esta entrega se realizaron las configuraciones necesarias para ejecutar pruebas unitarias de manera local con el comando `npm run test`, generar un informe de cobertura con el comando `npm run coverage` y revisar el nivel de cobertura en la herramienta de sonar con jest.
 
-Y cómo primer acercamiento a la implementación de pruebas de este proyecto se creó el archivo de pruebas [voting-handler.test.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/test/classes/voting-handler.test.js) para realizar la prueba de la nueva clase y validar la ejecución de pruebas en el proyecto.
+Y cómo primer acercamiento a la implementación de pruebas de este proyecto se creó el archivo de pruebas [voting-handler.test.js](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/test/classes/voting-handler.test.js) para realizar la prueba de la nueva clase y validar la ejecución de pruebas en el proyecto.
 
 ![Voting Handler Test]({{site.baseurl}}/img/voting-handler-test.png)
 

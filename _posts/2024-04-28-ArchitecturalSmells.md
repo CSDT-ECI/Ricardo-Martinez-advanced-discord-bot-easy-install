@@ -88,7 +88,7 @@ El bot de discord debe ser fácil de probar y validar para garantizar su calidad
     - Información de las integraciones y las APIs que usa en ciertos comandos
     - Una lista de comandos.
 
-- El comando [prefix](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/github_pages/src/commands/prefix.js) debería ser eliminado o implementado de otra manera. El comando permite reasigna un nuevo prefijo para un servidor pero lo hace escribiendo en un archivo de texto plano dentro del proyecto (Lo que en ocasiones genera errores). Se recomienda el uso de una base de datos no relacional cómo [mongoDB](https://www.mongodb.com) para este tipo de comandos.
+- El comando [prefix](https://github.com/CSDT-ECI/Ricardo-Martinez-advanced-discord-bot-easy-install/tree/master/src/commands/prefix.js) debería ser eliminado o implementado de otra manera. El comando permite reasigna un nuevo prefijo para un servidor pero lo hace escribiendo en un archivo de texto plano dentro del proyecto (Lo que en ocasiones genera errores). Se recomienda el uso de una base de datos no relacional cómo [mongoDB](https://www.mongodb.com) para este tipo de comandos.
 
 ### Confiabilidad
 
