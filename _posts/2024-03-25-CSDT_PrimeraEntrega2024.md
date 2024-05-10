@@ -1,3 +1,8 @@
+---
+title: "Análisis SonarCloud y recomendaciones "
+date: 2024-03-25
+---
+
 # CSDT Primera Entrega Bitacora
 El objetivo de este archivo es consolidar los diferentes análisis y entregas que se han hecho hasta la fecha sobre el estado de calidad del proyecto y agregar nuevos aportes, análisis y conclusiones de este.
 
